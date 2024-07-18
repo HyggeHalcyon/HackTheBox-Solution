@@ -1,0 +1,1 @@
+web server is being managed by xampp and ran using admin privilege,but `C:\xampp\htdocs` can be written by us sho we can put a web shell there

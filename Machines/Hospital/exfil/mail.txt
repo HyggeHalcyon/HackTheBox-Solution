@@ -1,0 +1,14 @@
+Needle designs for Darius Simion.
+From drbrown@hospital.htb on 2023-10-23 22:40
+
+Dear Lucy,
+
+I wanted to remind you that the project for lighter, cheaper and
+environmentally friendly needles is still ongoing 💉. You are the one in
+charge of providing me with the designs for these so that I can take
+them to the 3D printing department and start producing them right away.
+Please make the design in an ".eps" file format so that it can be well
+visualized with GhostScript.
+
+Best regards,
+Chris Brown.

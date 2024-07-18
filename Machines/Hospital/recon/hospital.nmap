@@ -1,0 +1,84 @@
+# Nmap 7.93 scan initiated Sat Nov 18 22:08:06 2023 as: nmap -sC -sV -oA recon/hospital 10.10.11.241
+Nmap scan report for 10.10.11.241
+Host is up (0.047s latency).
+Not shown: 981 filtered tcp ports (no-response)
+PORT     STATE SERVICE           VERSION
+22/tcp   open  ssh               OpenSSH 9.0p1 Ubuntu 1ubuntu8.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 e14b4b3a6d18666939f7aa74b3160aaa (ECDSA)
+|_  256 96c1dcd8972095e7015f20a24361cbca (ED25519)
+53/tcp   open  domain            Simple DNS Plus
+88/tcp   open  kerberos-sec      Microsoft Windows Kerberos (server time: 2023-11-19 10:08:16Z)
+135/tcp  open  msrpc             Microsoft Windows RPC
+139/tcp  open  netbios-ssn       Microsoft Windows netbios-ssn
+389/tcp  open  ldap              Microsoft Windows Active Directory LDAP (Domain: hospital.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=DC
+| Subject Alternative Name: DNS:DC, DNS:DC.hospital.htb
+| Not valid before: 2023-09-06T10:49:03
+|_Not valid after:  2028-09-06T10:49:03
+443/tcp  open  ssl/http          Apache httpd 2.4.56 ((Win64) OpenSSL/1.1.1t PHP/8.0.28)
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+|_http-title: Hospital Webmail :: Welcome to Hospital Webmail
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-11-10T23:48:47
+|_Not valid after:  2019-11-08T23:48:47
+|_ssl-date: TLS randomness does not represent time
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http        Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ldapssl?
+| ssl-cert: Subject: commonName=DC
+| Subject Alternative Name: DNS:DC, DNS:DC.hospital.htb
+| Not valid before: 2023-09-06T10:49:03
+|_Not valid after:  2028-09-06T10:49:03
+1801/tcp open  msmq?
+2103/tcp open  msrpc             Microsoft Windows RPC
+2107/tcp open  msrpc             Microsoft Windows RPC
+2179/tcp open  vmrdp?
+3268/tcp open  ldap              Microsoft Windows Active Directory LDAP (Domain: hospital.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=DC
+| Subject Alternative Name: DNS:DC, DNS:DC.hospital.htb
+| Not valid before: 2023-09-06T10:49:03
+|_Not valid after:  2028-09-06T10:49:03
+3269/tcp open  globalcatLDAPssl?
+| ssl-cert: Subject: commonName=DC
+| Subject Alternative Name: DNS:DC, DNS:DC.hospital.htb
+| Not valid before: 2023-09-06T10:49:03
+|_Not valid after:  2028-09-06T10:49:03
+3389/tcp open  ms-wbt-server     Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: HOSPITAL
+|   NetBIOS_Domain_Name: HOSPITAL
+|   NetBIOS_Computer_Name: DC
+|   DNS_Domain_Name: hospital.htb
+|   DNS_Computer_Name: DC.hospital.htb
+|   DNS_Tree_Name: hospital.htb
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-11-19T10:09:06+00:00
+| ssl-cert: Subject: commonName=DC.hospital.htb
+| Not valid before: 2023-09-05T18:39:34
+|_Not valid after:  2024-03-06T18:39:34
+8080/tcp open  http              Apache httpd 2.4.55 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.55 (Ubuntu)
+| http-title: Login
+|_Requested resource was login.php
+|_http-open-proxy: Proxy might be redirecting requests
+Service Info: Host: DC; OSs: Linux, Windows; CPE: cpe:/o:linux:linux_kernel, cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 6h59m59s, deviation: 0s, median: 6h59m58s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-11-19T10:09:08
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 18 22:09:47 2023 -- 1 IP address (1 host up) scanned in 101.64 seconds
